@@ -1,0 +1,160 @@
+*{
+    top: 0;
+    left: 0;
+}
+
+.game{
+    display: flex;
+    justify-content: center;
+}
+
+header{
+    color: antiquewhite;
+    font-size: 2.5rem;
+    font-family: monospace;
+}
+
+body{
+    background-image: url('wall.jpg');
+    background-size:cover;
+    overflow: hidden;
+}
+
+main{
+    color: aliceblue;
+    font-size: 1rem;
+}
+
+.holder{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#whenBall{
+    color: black;
+}
+
+.posit{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    height: 3rem;
+    padding-top: 0.2rem;
+    width: 11rem;
+    border-radius: 1.5rem;
+    background-color: antiquewhite;
+}
+
+#position{
+    color: black;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+input{
+    border-radius: 2rem;
+    padding: 0.6rem;
+    text-align: center;
+    color: darkblue;
+}
+
+.typee{
+    display: flex;
+    justify-content: center;
+    gap : 2rem;
+}
+
+.button{
+    padding: 0.8rem;
+    width: 10rem;
+    border-radius: 4rem;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(2, 1, 0);
+    font-size: 1.2rem;
+    background-color: rgb(129, 199, 211);
+}
+
+.button:hover{
+    color: rgb(156, 34, 180);
+    cursor: pointer;
+}
+
+.ball{
+    display: flex;
+    justify-content: center;
+    animation:rotator 2s;
+    animation-iteration-count: infinite;
+    margin-top: 5rem;
+    gap:0.5rem;
+}
+
+#baller{
+    height: 40px;
+}
+
+@keyframes rotator{
+    from{
+        transform : rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.scoreboard{
+    text-align: center;
+    height: 14rem;
+    width: 10rem;
+    background-color:antiquewhite;
+    color: black;
+    border-radius: 2rem;
+    font-size: 1.15rem;
+}
+
+.scoreboard_style{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.splash{
+    position: fixed;
+    top : 0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 20;
+    color: white;
+    text-align: center;
+    line-height: 90vh;
+}
+
+.splash.display-none{
+    position: fixed;
+    opacity: 0;
+    top : 0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: -10;
+    color: white;
+    text-align: center;
+    line-height: 90vh;
+    transition: all 0.5s;
+}
+
+@keyframes fader{
+    to{
+        opacity : 1;
+    }
+}
+
+.fadein{
+    opacity: 0;
+    animation: fader 1s ease-in forwards;
+}

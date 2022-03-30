@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" type="image/png" href="cricket.png">
+    <title>Cricket</title>
+</head>
+<body>
+
+    <div class="splash">
+        <h1 class="fadein">Welcome to My Cricket Game</h1>
+    </div>
+
+    <div class="game">
+        <header>
+            Cricket Match
+        </header><br>
+    </div>
+    
+    <main>
+        <div class="holder">
+            <div class="posit">
+                <p id="position">Status Bar</p>
+            </div>
+            <div class="posit">
+                <p id="whenBall">Score : </p>
+            </div>
+        </div>
+        
+        Type Your Score : <input type="text" id="player"> 
+        <div class="scoreboard_style">
+            <div class="scoreboard">
+                <h2>ScoreBoard</h2>
+                <p id="hit"></p>
+                <p id="run"></p> 
+                <p id="totalRuns"></p>
+                <p id="judge"></p>
+            </div>
+        </div>
+        
+        
+        <div class="typee">
+            <input type="button" class="button" onclick="showStatus()" value="Start or Restart">
+            <input type="button" class="button" onclick="print()" value="Hit">
+            <input type="button" class="button" onclick="Ball_now()" value="Ball">
+        </div>
+        <div class="ball">
+            <input type="image" src="ball_01.png" id="baller" alt="ballImage">
+            <input type="image" src="ball_01.png" id="baller" alt="ballImage">
+            <input type="image" src="ball_01.png" id="baller" alt="ballImage">
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
