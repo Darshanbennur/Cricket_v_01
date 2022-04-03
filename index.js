@@ -37,7 +37,7 @@ function print() {
         //When The Player Is Out
         else if (Number(var_01.value) == Number(random)) {
             document.getElementById("hit").innerHTML = "You are Out !!";
-            document.getElementById("run").innerHTML = "Total Score : " + score;
+            document.getElementById("totalRuns").innerHTML = "Total Score : " + score;
             player++;
         }
 
@@ -51,8 +51,6 @@ function print() {
 
         document.getElementById("whenBall").innerHTML = "Score : " + score;
     }
-
-
 }
 
 function Ball_now() {
@@ -62,7 +60,6 @@ function Ball_now() {
 
         var var_01 = document.getElementById("player");
         var random = Math.floor(((Math.random() * 10) % 5) + 1);
-        score_02 += random;
 
         if (Number(var_01.value) >= 7) {
             document.getElementById("hit").innerHTML = "Please Input The Run Within Range "
@@ -71,20 +68,20 @@ function Ball_now() {
         //When The Player Is Out
         else if (Number(var_01.value) == random) {
             document.getElementById("hit").innerHTML = "You Won The Game Pls Restart The Game";
-            document.getElementById("run").innerHTML = "Total Score : " + score_02;
+            document.getElementById("totalRuns").innerHTML = "Total Score : " + score_02;
             player++;
         }
 
         //When its good to Go
         else {
-            score_02 += Number(var_01.value);
+            score_02 += random;
             document.getElementById("hit").innerHTML = "It's a Hit";
             document.getElementById("run").innerHTML = "Computer Scored : " + random;
             document.getElementById("totalRuns").innerHTML = "Total Score : " + score_02;
         }
 
         if (score_02 > score) {
-            document.getElementById("position").innerHTML = "Aww You Lost";
+            document.getElementById("position").innerHTML = "Aww You Lost :(";
             document.getElementById("hit").innerHTML = "You Lost!";
             document.getElementById("run").innerHTML = " ";
             player++;
@@ -93,11 +90,11 @@ function Ball_now() {
         score -= random;
 
         if (score <= 0) {
-            document.getElementById("whenBall").innerHTML = "You Lost"
+            document.getElementById("whenBall").innerHTML = "You Lost :(";
             player++;
         }
         else {
-            document.getElementById("whenBall").innerHTML = "Score Needed : " + score;
+            document.getElementById("whenBall").innerHTML = "Score To Defend : " + score;
         }
     }
 }
