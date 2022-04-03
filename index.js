@@ -79,18 +79,13 @@ function Ball_now() {
             document.getElementById("run").innerHTML = "Computer Scored : " + random;
             document.getElementById("totalRuns").innerHTML = "Total Score : " + score_02;
         }
-
-        if (score_02 > score) {
-            document.getElementById("position").innerHTML = "Aww You Lost :(";
-            document.getElementById("hit").innerHTML = "You Lost!";
-            document.getElementById("run").innerHTML = " ";
-            player++;
-        }
-
+        
         score -= random;
 
         if (score <= 0) {
-            document.getElementById("whenBall").innerHTML = "You Lost :(";
+            document.getElementById("position").innerHTML = "Aww You Lost :(";
+            document.getElementById("hit").innerHTML = "You Lost!";
+            document.getElementById("run").innerHTML = " ";
             player++;
         }
         else {
